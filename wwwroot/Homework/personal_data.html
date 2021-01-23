@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>个人资料·一起帮</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/imag/logo.ico" media="screen" />
+</head>
+<body>
+    <header>
+        <h1>个人资料</h1>
+        <hr />
+    </header>
+    <article>
+        <form method="post" enctype="multipart/form-data">
+            <label>头像：（* 仅限jpg/png/gif）</label><br />
+            <!--如何简易限制文件格式-->
+            <input type="file" accept=".doc" multiple /><br />
+            <label>性别：</label>
+            <label><input type="radio" name="gender" value="male" checked />男</label>
+            <input type="radio" name="gender" value="female" />女<br />
+            <label>兴趣：</label>
+            <label><input type="checkbox" name="hobby" value="write" />写作</label>
+            <label><input type="checkbox" name="hobby" value="cs" />计算机</label>
+            <label><input type="checkbox" name="hobby" value="teacher" />老师</label><br />
+            <label>关键字：</label><br />
+            <select name="keyword">
+                <option value="hobby">兴趣</option>
+                <option value="able">能力</option>
+                <option value="money" selected>钱</option>
+            </select><br />
+            <label>生日：</label><br />
+            <input type="date" /><br />
+            <label>自我介绍：</label><br />
+            <textarea rows="20" cols="40" name="selfDescription" placeholder="简单的介绍一下自己吧，不要超过255字"></textarea><br />
+            <input type="submit" value="提交" />
+        </form>
+    </article>
+</body>
+</html>
