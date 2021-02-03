@@ -1,0 +1,17 @@
+﻿p{color:red}
+#yellow {color:yellow}
+.green {color:green}
+p,.aqua{color:aqua}
+div .green {background-color:antiquewhite}
+div>a {
+    background-color: blueviolet
+}
+a.import{background-color:dodgerblue}
+a:hover{color:white}
+a:link {
+    color: white
+}
+h4::before{content:url(/imag/logo.ico);}
+p::first-letter{background-color:burlywood}
+/*a::first-letter{background-color:burlywood}a标签用不了？*/
+input:read-only ~ label {color:greenyellow;}
