@@ -20,6 +20,24 @@
                 console.log("等级是无敌");
             }
         }
+        var users = 9;
+        var usersName;
+        switch (users)
+        {
+            case 0:
+                usersName = "访客"; break;
+            case 1:
+                usersName = "注册用户"; break;
+            case 2:
+                usersName = "文章发布者"; break;
+            case 3:
+                usersName = "管理者"; break;
+            case 4:
+                usersName = "管理者"; break;
+            default:
+                usersName = "无";
+        }
+        document.write("你的权限是" + usersName);
     </script>
 </head >
  <body>
