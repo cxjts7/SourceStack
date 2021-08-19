@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var odd,
+            lines = '',
+            sum = 0;
+        for (var i = 1; i < 100; i = i + 2) {
+            odd = lines + i;
+            sum = sum + i;
+            console.log(odd);
+        }
+        console.log(sum);
+
+
+        var array = [11, 58, 9, 7, 45, 26, 15, 43, 9, 22],
+            minB,
+            a = array[0];
+        for (var j = 1; j < array.length; j = j + 1) {
+            if (a < array[j]) {
+                minB = a;
+            } else {
+                a = array[j];
+            }
+        }
+        console.log(minB);
+
+
+        //for (var k = 2; k <= 100; k++) {
+        //    for (var l = 2; l < k; l++) {
+        //        if (k % l == 0) {
+        //            break;
+        //        } else {
+        //            l++;
+        //            console.log(k);
+        //            break;
+        //        }
+        //    }
+        //}错误示范，例如9%2就else了，第二个循环不能进行下去
+
+
+        for (var m = 2; m <= 100; m++) {
+            //假设i是质数，
+            var b = true;
+            //求证的过程，在1到i之间有没有能被整数整除的数
+            for (var n = 2; n < m; n++) {
+                if (m % n === 0) {
+                    //有数被整除了，就证明这个数不是质数
+                    b = false;
+                    break;
+                }
+            }
+            if (b == true) {
+                document.write(m + "<br />")
+            }
+        }
+        
+
+
+        //var prime = '';
+        //for (var k = 3; k <= 1000; k++) {
+        //    for (var l = 2; l < k; l++) {
+        //        if (k % l == 0) {
+
+        //        } else {
+        //            prime = prime + k;
+        //            console.log(prime);
+        //        }
+        //    }
+        //}
+
+        for (var u = 2; u <= 100; u++) {
+            var c = true;
+            for (var y = 2; y < u; y++) {
+                if (u % y === 0) {
+                    c = false;
+                    break;
+                }
+            }
+            if (c === true) {
+                document.write(u + "<br \>")
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
