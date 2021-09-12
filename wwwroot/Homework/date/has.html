@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var odd = [],
+            index = 0,
+            value = 0;
+        while (value < 99) {
+            value = 2 * index + 1;
+            odd[index] = value;
+            index++;
+        }
+        console.log(odd);
+
+        var rows = 5,
+            columns = rows * 2 - 1;
+        var yh = [];
+        for (var i = 0; i < rows; i++) {
+            yh[i] = [];
+            var lines = '';
+            for (var j = 0; j < columns; j++) {
+                if (i == 0) {
+                    yh[i][j] = (j == rows - 1) ? 1 : 0;
+                } else {
+                    var preRow = i - 1,
+                        preColumn = j - 1 >= 0 ? yh[preRow][j - 1] : 0,
+                        nextColumn = j + 1 < columns ? yh[preRow][j + 1] : 0;
+                    yh[i][j] = preColumn + nextColumn;
+                }
+                lines += yh[i][j] + ' ';
+            }
+            console.log(lines.replace(/0/g, " "));
+        }
+
+
+        var number = 2485,
+            nber = number.toString();
+
+        function has9(nber) {
+            return nber.indexOf("9") != -1;
+        }
+        console.log(has9(nber));
+
+        function has8(nber) {
+            return nber.indexOf("8") != -1;
+        }
+        console.log(has8(nber));
+
+        function has6(nber) {
+            return nber.indexOf("6") != -1
+        }
+
+        console.log(has6(nber));
+
+        function get986(func) {
+            var numbers = 147369,
+                nbers = numbers.toString();
+            // sum = 0; 遗留问题，如果求这个数字之内一共有多少数字包含6呢，利用for创建一个数组，数组下标可以试试。
+            if (func(nbers) == true) {  
+                console.log("这个数字包含6");
+            } else {
+                console.log("这个数字不包含6");
+            }
+        };
+
+        get986(function (nbers) {
+            return nbers.indexOf("6") != -1;
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
